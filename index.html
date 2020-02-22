@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="娃娃機" />
+    <meta property="og:description" content="一種電子遊戲機，它將獎勵物品陳列於透明箱內，當玩家投入錢幣後，可以控制一個機械手臂來抓取其中的物品，如果成功抓住並被自動放入取物孔則可獲得該物品作為獎品。有些抓物機會設定保證價格，也就是玩家投幣滿機台設定的金額後，可以一直嘗試夾取物品直到成功到手。" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/claw-crane.css">
+    <title>娃娃機</title>
+</head>
+<body>
+    <form class="machine">
+        <input type="checkbox" id="fire" name="fire" value="fire" />
+        <button class="btn" type="button" aria-labelledby="left-btn" ontouchstart=""><span class="left-arrow"></span><span class="sr" id="left-btn">往左</span></button>
+        <button class="btn" type="button" aria-labelledby="right-btn" ontouchstart=""><span class="right-arrow"></span><span class="sr" id="right-btn">往右</span></button>
+        <button class="btn" type="button" aria-labelledby="up-btn" ontouchstart=""><span class="up-arrow"></span><span class="sr" id="up-btn">往前</span></button>
+        <button class="btn" type="button" aria-labelledby="down-btn" ontouchstart=""><span class="down-arrow"></span><span class="sr" id="down-btn">往後</span></button>
+        <label class="btn red-btn" for="fire" role="button" aria-labelledby="fire-btn"><span id="fire-btn">取</span></label>
+        <button class="btn red-btn" type="button" aria-labelledby="fake-fire-btn" ontouchstart=""><span id="fake-fire-btn">取</span></button>
+        <div class="roof">全民娃娃機</div>
+        <div class="window">
+            <div class="crane-z">
+                <div class="crane-x">
+                    <div class="crane-arm">
+                        <div class="crane-claw">
+                            <div class="crane-finger"></div>
+                            <div class="crane-finger"></div>
+                            <div class="crane-finger"></div>
+                            <div class="crane-palm"></div>
+                            <div class="prize"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prizes">
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+            </div>
+            <div class="prizes">
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+            </div>
+            <div class="prizes">
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+                <div class="prize"></div>
+            </div>
+        </div>
+        <div class="op-area"></div>
+        <div class="prize-door"></div>
+        <div class="vents"></div>
+        <div class="feet"></div>
+    </form>
+</body>
+</html>
